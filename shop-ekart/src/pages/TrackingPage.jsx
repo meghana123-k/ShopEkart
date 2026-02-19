@@ -3,6 +3,7 @@ import { Header } from "../components/Header";
 export function TrackingPage() {
   return (
     <>
+    <Header/>
     <link rel="icon" href="/images/tracking.png" />
       <div className="header">
         <div className="left-section">
