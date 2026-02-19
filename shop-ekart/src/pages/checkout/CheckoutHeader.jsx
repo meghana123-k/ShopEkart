@@ -1,6 +1,7 @@
+import { totalQuantiy } from "../../utils/quantity";
 import "./CheckoutHeader.css";
 import { Link } from "react-router";
-export function CheckoutHeader() {
+export function CheckoutHeader({cart}) {
   return (
     <>
       <link rel="icon" href="/images/cart.png" />
@@ -16,7 +17,7 @@ export function CheckoutHeader() {
           <div className="checkout-header-middle-section">
             Checkout (
             <Link className="return-to-home-link" to="/">
-              3 items
+              {totalQuantiy(cart)} items
             </Link>
             )
           </div>

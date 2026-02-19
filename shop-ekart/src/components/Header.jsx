@@ -1,11 +1,7 @@
 import { NavLink } from "react-router";
 import "./header.css";
+import { totalQuantiy } from "../utils/quantity";
 export function Header({ cart }) {
-  let totalQuantity = 0;
-
-  cart.map((cartItem) => {
-    totalQuantity += cartItem.quantity;
-  });
   return (
     <div className="header">
       <div className="left-section">
@@ -30,7 +26,7 @@ export function Header({ cart }) {
 
         <NavLink className="cart-link header-link" to="/checkout">
           <img className="cart-icon" src="images/icons/cart-icon.png" />
-          <div className="cart-quantity">{totalQuantity}</div>
+          <div className="cart-quantity">{totalQuantiy(cart)}</div>
           <div className="cart-text">Cart</div>
         </NavLink>
       </div>
