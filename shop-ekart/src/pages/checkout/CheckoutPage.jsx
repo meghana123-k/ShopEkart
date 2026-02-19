@@ -5,7 +5,7 @@ import "./checkoutPage.css";
 import "./CheckoutHeader.css";
 import { CheckoutHeader } from "./CheckoutHeader";
 import { formatMoney } from "../../utils/money";
-import { totalQuantiy } from "../../utils/quantity";
+
 export function CheckoutPage({ cart }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
   const [paymentSummary, getPaymentSummary] = useState(null);
