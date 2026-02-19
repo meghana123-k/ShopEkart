@@ -4,6 +4,7 @@ import "./HomePage.css";
 export function HomePage() {
   return (
     <>
+      <link rel="icon" href="/images/home.png" />
       <Header />
       <div className="home-page">
         <div className="products-grid">

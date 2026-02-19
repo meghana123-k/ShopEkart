@@ -3,10 +3,11 @@ import { Header } from "../components/Header";
 export function TrackingPage() {
   return (
     <>
+    <link rel="icon" href="/images/tracking.png" />
       <div className="header">
         <div className="left-section">
           <a href="/" className="header-link">
-            <img className="logo" src="images/logo-white.png" />
+            <img className="logo" src="images/logo-white1.png" />
             <img className="mobile-logo" src="images/mobile-logo-white.png" />
           </a>
         </div>

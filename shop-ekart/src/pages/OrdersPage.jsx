@@ -4,11 +4,11 @@ export function OrdersPage() {
   return (
     <>
       <title>Orders</title>
+      <link rel="icon" href="/images/orders.png" />
       <Header />
 
       <div className="orders-page">
         <div className="page-title">Your Orders</div>
-
         <div className="orders-grid">
           <div className="order-container">
             <div className="order-header">
