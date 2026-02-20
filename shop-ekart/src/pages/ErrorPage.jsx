@@ -1,5 +1,5 @@
 import { Header } from "../components/Header";
-import { HomePage } from "./HomePage";
+import { HomePage } from "./home/HomePage";
 import { Link } from "react-router";
 import "./ErrorPage.css";
 export function ErrorPage() {
