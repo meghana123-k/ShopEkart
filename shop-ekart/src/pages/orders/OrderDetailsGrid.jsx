@@ -1,11 +1,12 @@
 import dayjs from "dayjs";
 import { Fragment } from "react";
+import { Link } from "react-router";
 export function OrdersDetailsGrid({ order }) {
   return (
     <div className="order-details-grid">
       {order.products &&
         order.products.map((orderProduct) => (
-          <Fragment key={orderProduct.product.id}>
+          <Fragment key={orderProduct.productId}>
             <div className="product-image-container">
               <img src={orderProduct.product.image} />
             </div>
@@ -27,11 +28,11 @@ export function OrdersDetailsGrid({ order }) {
               </button>
             </div>
             <div className="product-actions">
-              <a href={`/tracking/${order.id}/${orderProduct.product.id}`}>
+              <Link to={`/tracking/${order.id}/${orderProduct.product.id}`}>
                 <button className="track-package-button button-secondary">
                   Track package
                 </button>
-              </a>
+              </Link>
             </div>
           </Fragment>
         ))}
