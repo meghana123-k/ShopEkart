@@ -1,9 +1,7 @@
 import axios from "axios";
 import { formatMoney } from "../../utils/money";
-// import { useEffect } from "react";
 
 export function CartItemDetails({ cartItem, loadCart }) {
-  // useEffect
   const deleteCartItem = async () => {
     await axios.delete(`/api/cart-items/${cartItem.productId}`);
     loadCart();
