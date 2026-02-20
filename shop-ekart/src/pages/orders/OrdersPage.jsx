@@ -1,8 +1,8 @@
-import axios from "axios";
 import { Header } from "../../components/Header";
 import "./OrdersPage.css";
-import { useEffect, useState } from "react";
 import { OrdersGrid } from "./OrdersGrid";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export function OrdersPage({ cart }) {
   const [orders, setOrders] = useState([]);
