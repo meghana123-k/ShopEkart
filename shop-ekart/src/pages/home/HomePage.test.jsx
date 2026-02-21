@@ -2,7 +2,6 @@ import { HomePage } from "./HomePage";
 import { it, expect, describe, vi, beforeEach } from "vitest";
 import { render, screen, within } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
-import userEvent from "@testing-library/user-event";
 import axios from "axios";
 
 vi.mock("axios");
@@ -11,7 +10,7 @@ describe("HomePage component", () => {
   beforeEach(() => {
     loadCart = vi.fn();
 
-    axios.get.mockImplementation(async (urlpath) => {
+    axios.get.mockImplementation(async () => {
       return {
         data: [
           {
