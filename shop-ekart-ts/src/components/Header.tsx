@@ -14,9 +14,9 @@ export function Header({ cart }: HeaderProps) {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
-  const searchText = searchParams.get("search");
-  const [inputText, setInputText] = useState(searchText || "");
-  const searchInput = (event) => {
+  const searchText = searchParams.get("search") || "";
+  const [inputText, setInputText] = useState<string>(searchText || "");
+  const searchInput = (event : React.ChangeEvent<HTMLInputElement>) => {
     setInputText(event.target.value);
   };
 
@@ -24,7 +24,7 @@ export function Header({ cart }: HeaderProps) {
     if (!inputText.trim()) return;
     navigate(`/?search=${inputText}`);
   };
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event : React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       searchButton();
     }
