@@ -3,10 +3,17 @@ import { totalQuantiy } from "../utils/quantity";
 import { Link, useNavigate, useSearchParams } from "react-router";
 import { useState } from "react";
 
-export function Header({ cart }) {
+type HeaderProps = {
+  cart: {
+    productId: string;
+    quantity: number;
+    deliveryOptionId: string;
+  }[];
+};
+export function Header({ cart }: HeaderProps) {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  
+
   const searchText = searchParams.get("search");
   const [inputText, setInputText] = useState(searchText || "");
   const searchInput = (event) => {
