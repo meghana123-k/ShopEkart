@@ -58,8 +58,8 @@ export function Header({ cart }: HeaderProps) {
       </div>
 
       <div className="right-section">
-        <div className="account-link header-link">
-          <div className="account-text">Login</div>
+        <div className="orders-link header-link">
+          <div className="orders-text">Login</div>
         </div>
         <Link className="orders-link header-link" to="/orders">
           <span className="orders-text">Orders</span>
