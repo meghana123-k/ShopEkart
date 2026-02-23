@@ -5,6 +5,7 @@ import { OrdersPage } from "./pages/orders/OrdersPage";
 import { TrackingPage } from "./pages/TrackingPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { useEffect, useState } from "react";
+import { LoginPage } from "./pages/LoginPage";
 import axios from "axios";
 import "./App.css";
 
@@ -24,11 +25,15 @@ function App() {
         path="checkout"
         element={<CheckoutPage cart={cart} loadCart={loadCart} />}
       />
-      <Route path="orders" element={<OrdersPage cart={cart} loadCart={loadCart}/>} />
+      <Route
+        path="orders"
+        element={<OrdersPage cart={cart} loadCart={loadCart} />}
+      />
       <Route
         path="tracking/:orderId/:productId"
         element={<TrackingPage cart={cart} />}
       />
+      <Route path="login" element={<LoginPage />} />
       <Route path="*" element={<ErrorPage cart={cart} />} />
     </Routes>
   );
