@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
+import { Footer } from "../components/Footer";
 export function TrackingPage({ cart }) {
   const { orderId, productId } = useParams();
   const [order, setOrder] = useState(null);
@@ -74,6 +75,7 @@ export function TrackingPage({ cart }) {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
