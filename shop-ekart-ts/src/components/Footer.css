@@ -1,63 +1,79 @@
 .footer {
-  background: rgb(8, 79, 45);
-  color: white;
-  padding: 44px 24px 22px;
+  background: linear-gradient(135deg, #084f2d, #0c6b3c);
+  color: #ffffff;
+  padding: 60px 24px 28px;
+  font-family: 'Inter', sans-serif;
 }
 
+/* ================= TOP SECTION ================= */
 .footer-top {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 28px;
+  gap: 40px;
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
 }
 
 .footer-logo {
-  width: 190px;
+  width: 200px;
   max-width: 100%;
 }
 
 .footer-tagline {
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 15px;
+  opacity: 0.9;
 }
 
+/* ================= BADGES ================= */
 .footer-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
 .footer-badge {
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 999px;
-  padding: 6px 12px;
+  padding: 6px 14px;
   font-size: 13px;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
 }
 
+.footer-badge:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ================= COLUMNS ================= */
 .footer-column h3 {
-  margin: 0 0 14px;
-  font-size: 16px;
+  margin: 0 0 16px;
+  font-size: 17px;
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .footer-column a {
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
 }
 
 .footer-column a:hover {
-  text-decoration: underline;
+  color: #ffffff;
+  transform: translateX(4px);
 }
 
 .footer-column img {
@@ -67,66 +83,84 @@
   filter: brightness(0) invert(1);
 }
 
+/* ================= SOCIAL ================= */
 .social-row {
   display: flex;
-  gap: 8px;
-  margin-bottom: 18px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .social-row a {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   display: grid;
   place-items: center;
   font-weight: 700;
-  margin: 0;
+  transition: all 0.3s ease;
 }
 
-.payments-title {
-  margin-top: 0;
+.social-row a:hover {
+  background: white;
+  color: #084f2d;
+  transform: translateY(-3px);
 }
 
+/* ================= PAYMENTS ================= */
 .payment-row {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .payment-row span {
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 6px;
-  padding: 6px 10px;
+  padding: 6px 12px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
+.payment-row span:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ================= BOTTOM ================= */
 .footer-bottom {
   max-width: 1200px;
-  margin: 24px auto 0;
-  padding-top: 16px;
-  border-top: 1px solid white;
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
+  font-size: 14px;
+  opacity: 0.85;
 }
 
 .footer-bottom p {
   margin: 0;
 }
 
+/* ================= RESPONSIVE ================= */
 @media (max-width: 960px) {
   .footer-top {
     grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
 }
 
 @media (max-width: 600px) {
   .footer {
-    padding: 32px 16px 16px;
+    padding: 40px 16px 20px;
   }
 
   .footer-top {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
+  }
+
+  .footer-column h3 {
+    font-size: 16px;
   }
 }
