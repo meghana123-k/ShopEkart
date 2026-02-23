@@ -1,4 +1,4 @@
-import { Footer } from "../components/Footer";
+
 import { Header } from "../components/Header";
 import "./LoginPage.css";
 export function LoginPage() {
@@ -53,7 +53,6 @@ export function LoginPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

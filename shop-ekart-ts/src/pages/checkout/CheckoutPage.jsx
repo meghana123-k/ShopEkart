@@ -5,7 +5,7 @@ import "./CheckoutHeader.css";
 import { CheckoutHeader } from "./CheckoutHeader";
 import { OrderSummary } from "./OrderSummary";
 import { PaymentSummary } from "./PaymentSummary";
-import { Footer } from "../../components/Footer";
+
 
 export function CheckoutPage({ cart, loadCart }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
@@ -49,7 +49,7 @@ export function CheckoutPage({ cart, loadCart }) {
           }
         </div>
       </div>
-      <Footer />
+
     </>
   );
 }

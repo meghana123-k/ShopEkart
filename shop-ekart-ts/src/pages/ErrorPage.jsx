@@ -2,7 +2,6 @@ import { Header } from "../components/Header";
 import { HomePage } from "./home/HomePage";
 import { Link } from "react-router";
 import "./ErrorPage.css";
-import { Footer } from "../components/Footer";
 export function ErrorPage({ cart }) {
   return (
     <>
@@ -15,7 +14,6 @@ export function ErrorPage({ cart }) {
           <button className="error-message-btn">Go Home</button>
         </Link>
       </div>
-      <Footer />
     </>
   );
 }

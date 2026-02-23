@@ -4,7 +4,7 @@ import "./HomePage.css";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router";
 import { ProductGrid } from "./ProductGrid";
-import { Footer } from "../../components/Footer";
+
 export function HomePage({ cart, loadCart }) {
   const [products, setProducts] = useState([]);
   const [searchParams] = useSearchParams();
@@ -28,7 +28,7 @@ export function HomePage({ cart, loadCart }) {
       <div className="home-page">
         <ProductGrid products={products} loadCart={loadCart} />
       </div>
-      <Footer />
+
     </>
   );
 }

@@ -3,7 +3,7 @@ import "./OrdersPage.css";
 import { OrdersGrid } from "./OrdersGrid";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Footer } from "../../components/Footer";
+
 
 export function OrdersPage({ cart, loadCart }) {
   const [orders, setOrders] = useState([]);
@@ -24,7 +24,6 @@ export function OrdersPage({ cart, loadCart }) {
         <div className="page-title">Your Orders</div>
         {<OrdersGrid orders={orders} loadCart={loadCart} />}
       </div>
-      <Footer />
     </>
   );
 }
