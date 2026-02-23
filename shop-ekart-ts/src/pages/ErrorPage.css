@@ -9,9 +9,9 @@
     color: white;
     border: none;
     border-radius: 10px;
-    background-color: rgb(0, 0, 139);
+    background-color: rgb(8, 79, 45);
     transition: 0.3s ease;
 }
 .error-message-btn:hover {
-    background-color: rgb(0, 0, 180);
+    background-color: rgb(8, 79, 45, 0.8);
 }

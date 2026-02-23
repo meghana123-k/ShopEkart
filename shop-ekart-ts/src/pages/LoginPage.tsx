@@ -1,8 +1,9 @@
+import { Header } from "../components/Header";
 import "./LoginPage.css";
-
 export function LoginPage() {
   return (
     <div className="login-page">
+      <Header />
       <div className="login-card">
         <h1 className="login-title">Login</h1>
 
@@ -48,6 +49,7 @@ export function LoginPage() {
             A
           </button>
         </div>
+
       </div>
     </div>
   );
